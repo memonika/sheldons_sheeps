@@ -1,4 +1,4 @@
-/Users/Rene/Desktop/sheldons_sheeps/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+git push -u origin master/Users/Rene/Desktop/sheldons_sheeps/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/Rene/Desktop/sheldons_sheeps/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/Rene/Desktop/sheldons_sheeps/obj/Debug/Assembly-CSharp.dll
 /Users/Rene/Desktop/sheldons_sheeps/obj/Debug/Assembly-CSharp.dll.mdb
