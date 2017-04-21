@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Sheep.cs">
+    <Files>
+      <File FileName="Assets/Sheep.cs" Line="19" Column="58" />
+      <File FileName="Assets/KeepScore.cs" Line="11" Column="2" />
+      <File FileName="Assets/SpawnSheeps.cs" Line="28" Column="1" />
+      <File FileName="Assets/wall.cs" Line="5" Column="15" />
+      <File FileName="Assets/Kill.cs" Line="6" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
