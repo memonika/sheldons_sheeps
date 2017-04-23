@@ -10,30 +10,27 @@ public class Sheep : MonoBehaviour {
 	public Sprite sheepRed;
 	private GameObject mainGame;
 	private Transform characterObject;
+	public int speed = 4;
 
 	void Start () {
 		correctKeyPressed = false;
 		mainGame = GameObject.Find ("Game");
-//		characterObject = transform.GetChild(0);
-//
-//		Debug.Log (characterObject.GetComponent<TextMesh>());
 	}
 
 	void Update () {
-		transform.Translate(Vector3.right * (Time.deltaTime * 4), Space.World);
+		transform.Translate(Vector3.right * Time.deltaTime * getSpeed(), Space.World);
+	}
+
+	int getSpeed() {
+		return speed;
 	}
 		
 	void OnTriggerStay2D(Collider2D other) {
-		if (Input.GetKey(character) || Input.GetKeyDown (character)) {
+		if (Input.inputString == character) {
 			correctKeyPressed = true;
 		}
 	}
-
-	public void setCharacter(string randomChar) {
-		character = randomChar;
-		transform.GetChild(0).GetComponent<TextMesh> ().text = randomChar;
-	}
-
+		
 	void OnTriggerExit2D(Collider2D other) {
 		SpriteRenderer renderer = GetComponent<SpriteRenderer>();
 		KeepScore scoreKeeper = mainGame.GetComponent<KeepScore> ();
@@ -47,4 +44,14 @@ public class Sheep : MonoBehaviour {
 			scoreKeeper.decreaseScore ();
 		}
 	}
+
+	public void setCharacter(string randomChar) {
+		character = randomChar;
+		transform.GetChild(0).GetComponent<TextMesh> ().text = randomChar;
+	}
+
+	public void setSpeed(int newSpeed) {
+		speed = newSpeed;
+	}
+		
 }
