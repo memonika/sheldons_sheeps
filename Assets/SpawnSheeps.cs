@@ -11,6 +11,8 @@ public class SpawnSheeps : MonoBehaviour {
 	private string easyPossibleCharacters = "asdfghjk";
 	private string mediumPossibleCharacters = "abcdefghjkmnopqrstuvwxyz";
 	private string hardPossibleCharacters = "abcdefghjkmnopqrtuvwxyzABCDEFGJKMNOPQRTUVWXYZ!§$%&/()=?";
+	private Transform oldSpawnedSheep;
+	private Transform spawnedSheep;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +26,7 @@ public class SpawnSheeps : MonoBehaviour {
 		string randomChar = getRandomCharacter ();
 		int sheepSpeed = getSheepSpeed ();
 
-		Transform spawnedSheep = Instantiate(sheep, new Vector3(-10, -2.4f, 0), Quaternion.identity);
+		spawnedSheep = Instantiate(sheep, new Vector3(-10, -2.4f, 0), Quaternion.identity);
 		Sheep newSheep = spawnedSheep.GetComponent<Sheep> ();
 
 		newSheep.setCharacter (randomChar);
@@ -68,4 +70,17 @@ public class SpawnSheeps : MonoBehaviour {
 		difficulty = newDifficulty;
 	}
 
+	public void stop()
+	{
+		CancelInvoke ();
+		Debug.Log ("spawn sheeps STOP");
+		//TODO if not empty 
+		Destroy (spawnedSheep.gameObject);
+	}
+
+	public void reStart()
+	{
+		Debug.Log ("spawn sheeps START");
+		InvokeRepeating("SpawnSheep", 1.0f, spawnGap);
+	}
 }
